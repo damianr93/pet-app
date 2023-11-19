@@ -1,0 +1,374 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo general: */
+
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-image: url(./public/fondo.png);
+  background-color: #242424;
+  background-size: 100px;
+}
+
+section {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.347);
+  height: 97vh;
+  margin: 15px ;
+  background-color: #403c2aa4;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: grid; 
+  border-radius: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+    "card card todolist todolist"
+    "card card todolist todolist"
+    "vet vet vet vet"
+    "vet vet vet vet"
+    "vet vet vet vet";  
+}
+
+/**presentacion: */
+.presentacion { 
+  grid-area: card;
+  background-color: rgba(255, 255, 255, 0.366);
+  border: #242424 solid 1px;
+  border-radius: 10px;
+  margin: 2.5px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.presentacion h2 {
+  text-decoration: underline 1px;
+  font-size: 1.2rem;
+  text-align: center;
+
+}
+
+.presentacion p {
+  line-height: 1.6em;
+}
+.presentacionForm {
+  background-color: #94cbff00;
+}
+
+.presentacionForm div{
+  margin: 2px 1px;
+}
+
+.presentacionForm-input {
+  color: rgb(255, 255, 255);
+  background-color:transparent;
+  border: none;
+  border-bottom: 1px dashed rgba(243, 200, 121, 0.637);
+  padding: 1px;
+  transition: 1s;
+}
+
+.presentacionForm-date {
+  color: rgba(255, 255, 255, 0);
+  background-color:transparent;
+  border: none;
+  border-bottom: 1px dashed rgba(243, 200, 121, 0.637);
+  padding: 1px;
+  transition: 1s;
+}
+
+.presentacionForm-radio {
+  width: 0.5rem;
+  margin: 0px 2px;
+}
+
+.presentacionForm textarea{
+  width: 100%;
+  height: 60px;
+  resize: none;
+}
+
+.presentacionForm-button {
+  padding: 5px 10px;
+  background-color: #9e9e8f;
+  border: 1px solid #9aa51d;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #333;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.petload {
+  width: 100%;
+}
+
+.presentacionImagen img {
+  width: 83%;
+  border: #242424 solid 2px;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.347);
+}
+
+.presentacionImagen {
+  flex: 1;
+  max-width: 50%;
+  text-align: center;
+}
+
+.presentacionDatos { 
+  flex: 1;
+  max-width: 50%;
+  background-color: #24242428;
+  margin: 10px 10px 10px 0;
+  border-radius: 10px;
+  padding: 0.2em;
+  border: #242424 solid 1px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.347);
+  overflow: auto;
+}
+
+
+/**Vet: */
+
+.veterinaria { 
+  grid-area: vet; 
+  background-color: rgba(255, 255, 255, 0.366);
+  border: #242424 solid 1px;
+  border-radius: 10px;
+  margin: 2.5px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.veterinaria h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  color: #0000003a;
+  
+}
+
+.veterinaria h2 {
+  text-align: left;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+.veterinaria table {
+  text-align: center;
+  border-collapse: collapse;
+  margin: 3px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.veterinaria tr {
+  text-align: center;
+  background-color: rgb(209, 233, 255);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.347);
+
+}
+
+
+.veterinaria td, th{
+  border: 0.1px solid #0000005b;
+  padding: 2px;
+  margin: 2px;
+  cursor: pointer;
+  font-size: 12px;
+  width: 90px;
+}
+
+.veterinaria tr:hover{
+  background-color:#ffffff ;
+  cursor: pointer;
+}
+
+/** Vacunacion dentro de ve*/
+
+.divVeterinaria {
+  min-width: 300px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 10px;
+  margin: 5px;
+  flex: 1;
+  border-radius: 10px;
+  border: 1px solid black;
+  
+}
+
+.buttonsVeterinaria {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  
+}
+
+.buttonAdicionVeterinaria,
+.buttonEdicionVeterinaria {
+  background-color: #a9ceff7c;
+  color: #fff; 
+  padding: 3px 6px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 1px;
+  font-size: 12px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.buttonAdicionVeterinaria:hover,
+.buttonEdicionVeterinaria:hover {
+  background-color: #45a049;
+}
+
+.recordatorio { 
+  grid-area: todolist; 
+  background-color: rgba(255, 255, 255, 0.366);
+  border: #242424 solid 1px;
+  border-radius: 10px;
+  margin: 2.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  overflow: scroll;
+
+}
+
+.recordatoriosLI {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+
+}
+
+.recordatorioInput { 
+  background-color: rgba(255, 255, 255, 0.366);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  border: none;
+  margin: 5px;
+  padding: 5px;
+  font-size: 15px;
+  width: 75%;
+}
+
+.recordatorio ul {
+  width: 85%;
+  background-color: rgba(209, 233, 255, 0.425);
+  border: 0.1px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.347);
+  border-radius: 5px;
+  text-align: left;
+  font-size: 12px;
+  margin: 5px;
+  padding: 5px 25px ;
+  width: 75%;
+}
+
+.recordatorio div{
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 15px;
+font-weight: bold;
+
+}
+
+/* Estilos para el botón de eliminar */
+.destruirRecordatorio {
+  min-width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.destruirRecordatorio::before,
+.destruirRecordatorio::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 2px;
+  background-color: #ff0000;
+}
+
+.destruirRecordatorio::before {
+  transform: translate(-50%, -50%) rotate(45deg); /* Barra diagonal izquierda */
+}
+
+.destruirRecordatorio::after {
+  transform: translate(-50%, -50%) rotate(-45deg); /* Barra diagonal derecha */
+}
+
+
+
+/* historiaClinica */
+
+.historiaClinica__detalle {
+  background-color: rgb(209, 233, 255);
+  border: 0.1px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.347);
+  border: solid 1px black;
+  border-radius: 5px;
+  text-align: left;
+  font-size: 12px;
+  margin: 5px;
+  padding: 5px;
+
+}
+
+.enfermedades__detalle {
+  margin: 20px;
+  text-align: left;
+  font-size: 12px;
+}
+
+/*Comienza Responsive Design*/
+
+@media only screen and (max-width: 1307px) {
+
+  section {
+    display: flex;
+    flex-wrap: wrap; 
+    height: auto;
+  }
+
+  .veterinaria {
+    display: flex;
+    flex-wrap: wrap;
+    height: 800px;
+    justify-content: center;
+    overflow: scroll;
+  }
+
+  .veterinaria h1 {
+  
+    font-size: 50px;
+  }
+
+  .recordatorio { 
+    display: flex;
+    height: 500px;
+    width: 100%;
+  }
+}

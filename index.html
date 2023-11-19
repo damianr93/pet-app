@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Mis Mascotas</title>
+  </head>
+  
+  <body>
+    
+    <section>
+      <div class="presentacion">
+        <div class="presentacionImagen">
+          <img src="./public/pet1.jpg" alt="">
+        </div>
+
+        <div class="presentacionDatos">
+          <form class="presentacionForm" action="">
+            <legend>Datos:</legend>
+
+            <div>
+              <label for="number">Nombre:</label>
+              <input class="presentacionForm-input" type="text" id="number" name="namber" placeholder="Firulais">
+            </div>
+
+            <div>
+              <label for="Apellido">Familia:</label>
+              <input class="presentacionForm-input" type="text" id="Apellido" name="Apellido" placeholder="Mayorga">
+            </div>
+
+            <div>
+              <label for="Edad">Edad:</label>
+              <input class="presentacionForm-input" type="number" id="Edad" name="Edad" placeholder="7">
+            </div>
+
+            <div>
+              <label for="date">Fecha de Nacimiento:</label>
+              <input class="presentacionForm-date" type="date" id="date" name="date" placeholder="09/01/1993">
+            </div>
+                
+            <div>
+              <label>Sexo: </label>
+              <input class="presentacionForm-radio" type="radio" name="sexo" value="mujer">Macho</input>
+              <input class="presentacionForm-radio" type="radio" name="sexo" value="hombre">Hembra</input>
+            </div>
+
+            <div>
+              <label for="comentario">Breve Descripcion:</label>
+              <textarea name="comentario" id="comentario" cols="30" rows="5"></textarea>
+            </div>
+
+            <div>
+              <input class="presentacionForm-button" type="submit" value="Enviar todo">
+              <input class="presentacionForm-button" type="reset" value="Borrar todo">
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+      <div class="veterinaria">
+
+        <h1>VETERINARIA</h1>
+
+          <div class=" divVeterinaria vacunacion">
+
+            <div class="buttonsVeterinaria">
+              <button class="buttonAdicionVeterinaria">+</button>
+              <button class="buttonEdicionVeterinaria">Editar</button>
+            </div>
+
+            <h2>vacunacion:</h2>
+            <table class="vacunacionTable">
+              <tr>
+                <th>Fecha</th>
+                <th>Vacuna</th>
+                <th>Le toca el:</th>
+                <th>Veterinaria</th>
+              </tr>
+            </table>
+
+          </div>
+
+          <div class="divVeterinaria desparacitacion">
+            
+            <div class="buttonsVeterinaria">
+              <button class="buttonAdicionVeterinaria">+</button>
+              <button class="buttonEdicionVeterinaria">Editar</button>
+            </div>
+            
+              <h2>Desparacitacion:</h2>
+              <table class="desparacitacionTable">
+                <tr>
+                  <th>Fecha</th>
+                  <th>Descripcion</th>
+                  <th>Le toca en:</th>
+                  <th>Veterinaria</th>
+                </tr>
+              </table>
+ 
+          </div>
+
+        <div class="divVeterinaria historiaClinica">
+
+          <div class="buttonsVeterinaria">
+            <button class="buttonAdicionVeterinaria">+</button>
+            <button class="buttonEdicionVeterinaria">Editar</button>
+          </div>
+
+            <h2>Historia clinica:</h2>
+            
+        </div>
+
+        <div class="divVeterinaria enfermedades">
+
+           <div class="buttonsVeterinaria">
+              <button class="buttonAdicionVeterinaria">+</button>
+              <button class="buttonEdicionVeterinaria">Editar</button>
+            </div>
+            <h2>Enfermedades:</h2>
+    
+        </div>
+      </div>
+      
+      <div class="recordatorio">
+        <h1>
+          Recordatorios:
+        </h1>
+        <input type="text" class="recordatorioInput">
+        <div class="recordatoriosLI">
+
+        </div>
+     
+      </div>  
+      
+        
+      
+   
+    </section>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

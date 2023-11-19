@@ -1,0 +1,51 @@
+.hide-add-table {
+    display: none !important;
+}
+
+.modal-container-table {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.divEdicionVeterinaria  {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.divEdicionVeterinaria table {
+    font-size: 10px;
+    text-align: center;
+    border-collapse: collapse;
+    margin: 3px;
+    display: flex;
+    justify-content: center;
+}
+
+.divEdicionVeterinaria tr {
+    text-align: center;
+    background-color: rgba(150, 190, 225, 0.349);
+  
+}
+
+.divEdicionVeterinaria td, th{
+    border: 0.1px solid #0000005b;
+    padding: 2px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 764px) {
+
+    .tableDataEdit input{
+        width: 85px;
+    }
+
+}
